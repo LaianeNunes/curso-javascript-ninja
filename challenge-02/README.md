@@ -4,29 +4,36 @@ Nesse exercício, você está livre para escolher os nomes para suas variáveis 
 
 ```js
 // Crie uma função que receba dois argumentos e retorne a soma dos mesmos.
-?
+function soma(x,y) {
+  return x+y;
+ }
 
 // Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
-?
+var soma = soma(10,2) + 5;
 
 // Qual o valor atualizado dessa variável?
-?
+17;
 
 // Declare uma nova variável, sem valor.
-?
+var nova;
 
 /*
 Crie uma função que adicione um valor à variável criada acima, e retorne a string:
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-?
+function retorno(x) {
+  x = 10;
+  var frase = 'O valor da variável agora é ';
+  return frase + x;
 
 // Invoque a função criada acima.
-?
+retorno(nova);
 
 // Qual o retorno da função? (Use comentários de bloco).
-?
+/*
+O retorno é o que foi solicitado.
+*/
 
 /*
 Crie uma função com as seguintes características:
@@ -35,19 +42,30 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
-?
+function seila(x,y,z) {
+  if(x == NULL && y == NULL && z == NULL) {
+  return 'Preencha todos os valores corretamente!';
+  }
+  
+  return (x*y*z + 2);
+ }
 
 // Invoque a função criada acima, passando só dois números como argumento.
-?
+seila(1,2);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+/*
+O retorno é o que foi solicitado.
+*/
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
-?
+seila(1,2,3);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
 ?
+/*
+8
+*/
 
 /*
 Crie uma função com as seguintes características:
@@ -58,7 +76,27 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-?
+function naosei(x,y,z) {
+  if(x != NULL && y==NULL && z==NULL) {
+  return x;
+  } else if (x == NULL && y!=NULL && z==NULL) {
+  return y;
+  } else if (x == NULL && y==NULL && z!=NULL) {
+  return z;
+  } else if(x != NULL && y!=NULL && z==NULL) {
+  return x + y;
+  } else if (x != NULL && y!=NULL && z!=NULL) {
+  return x+z;
+  } else if (x == NULL && y!=NULL && z!=NULL) {
+  return y+z;
+  } else if (x != NULL && y!=NULL && z!=NULL) {
+  return (x+y)/z;
+  } else if(x == NULL && y==NULL && z==NULL) {
+  return false;
+  } else {
+    return null;
+    }
+}
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
 ?
